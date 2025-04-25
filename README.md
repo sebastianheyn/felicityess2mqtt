@@ -15,6 +15,23 @@ The script is designed to run **once per minute via cronjob**.
 - The script handles Wi-Fi connection management automatically.
 - I have put the script into /usr/local/bin/
 
+## Dependencies
+
+This script was developed and tested on **Debian 12.6** (Raspberry Pi).  
+It requires the following tools to be installed:
+
+- `nmcli` (for Wi-Fi management) → package: `network-manager`
+- `mosquitto-clients` (for MQTT publishing) → package: `mosquitto-clients`
+- `netcat-openbsd` (for sending TCP requests) → package: `netcat-openbsd`
+- `bc` (for floating-point calculations) → package: `bc`
+
+You can install all dependencies with:
+
+```bash
+sudo apt update
+sudo apt install network-manager mosquitto-clients netcat-openbsd bc
+
+
 ## Technical Background
 
 The structure of the battery's communication protocol was reverse-engineered  
