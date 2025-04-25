@@ -15,7 +15,15 @@ The script is designed to run **once per minute via cronjob**.
 - The script handles Wi-Fi connection management automatically.
 - I have put the script into /usr/local/bin/
 
-Example MQTT payload:
+## Technical Background
+
+The structure of the battery's communication protocol was reverse-engineered  
+by capturing and analyzing network traffic between the **Felicity mobile app** and the battery.
+
+By inspecting the transmitted packets, I was able to reconstruct the  
+correct request string and parse the JSON-like response format.
+
+Example MQTT payload created by the script and sent to your MQTT server:
 
 ```json
 {
