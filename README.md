@@ -38,8 +38,7 @@ It requires the following tools to be installed:
 
 You can install all dependencies with:
 
-sudo apt update
-sudo apt install network-manager mosquitto-clients netcat-openbsd bc
+sudo apt update && sudo apt install network-manager mosquitto-clients netcat-openbsd bc
 
 ---
 
