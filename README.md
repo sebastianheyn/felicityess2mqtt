@@ -38,10 +38,10 @@ It requires the following tools to be installed:
 
 You can install all dependencies with:
 
-
 sudo apt update
 sudo apt install network-manager mosquitto-clients netcat-openbsd bc
 
+---
 
 ## Technical Background
 
@@ -50,6 +50,8 @@ by capturing and analyzing network traffic between the **Felicity mobile app** a
 
 By inspecting the transmitted packets, I was able to reconstruct the  
 correct request string and parse the JSON-like response format.
+
+---
 
 Example MQTT payload created by the script and sent to your MQTT server:
 
