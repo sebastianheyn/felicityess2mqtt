@@ -8,7 +8,7 @@ The script is designed to run **once per minute via cronjob**.
 
 ## Setup
 
-- The battery is **not connected to the house Wi-Fi**.
+- The battery is **not connected to the house LAN Wi-Fi**.
 - A **Raspberry Pi** uses two Wi-Fi interfaces:
   - `wlan0` stays connected to your normal home network.
   - `wlan1` connects directly to the battery's Wi-Fi (static IP, no internet).
