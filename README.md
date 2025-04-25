@@ -13,6 +13,7 @@ The script is designed to run **once per minute via cronjob**.
   - `wlan0` stays connected to your normal home network.
   - `wlan1` connects directly to the battery's Wi-Fi (static IP, no internet).
 - The script handles Wi-Fi connection management automatically.
+- I have put the script into /usr/local/bin/
 
 Example MQTT payload:
 
