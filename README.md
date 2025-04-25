@@ -6,6 +6,8 @@ The data is then published via MQTT to a specified broker.
 
 The script is designed to run **once per minute via cronjob**.
 
+---
+
 ## Setup
 
 - The battery is **not connected to the house LAN Wi-Fi**.
@@ -14,6 +16,15 @@ The script is designed to run **once per minute via cronjob**.
   - `wlan1` connects directly to the battery's Wi-Fi (static IP, no internet).
 - The script handles Wi-Fi connection management automatically.
 - I have put the script into /usr/local/bin/
+
+---
+## Features
+
+- Sets up and connects `wlan1` to the battery's Wi-Fi network using a static IP (no gateway).
+- Requests real-time battery status via TCP connection and parses the data.
+- Publishes the extracted values (voltage, current, SoC, temperature, cell voltages) to an MQTT broker.
+
+---
 
 ## Dependencies
 
@@ -27,7 +38,7 @@ It requires the following tools to be installed:
 
 You can install all dependencies with:
 
-```bash
+
 sudo apt update
 sudo apt install network-manager mosquitto-clients netcat-openbsd bc
 
